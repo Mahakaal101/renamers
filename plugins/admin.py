@@ -44,7 +44,7 @@ async def ceasepremium(bot, message):
 
 @Client.on_message((filters.channel | filters.private) & filters.user(ADMIN) & filters.command(["resetpower"]))
 async def resetpower(bot, message):
-	    await message.reply_text(text=f"Do you really want to reset daily limit to default data limit 1.2GB ?",quote=True,reply_markup=InlineKeyboardMarkup([
+	    await message.reply_text(text=f"Do you really want to reset daily limit to default data limit 1.5GB ?",quote=True,reply_markup=InlineKeyboardMarkup([
 		           [InlineKeyboardButton("• YES ! Set as Default •",callback_data = "dft")],
 				   [InlineKeyboardButton("❌ Cancel ❌",callback_data = "cancel")]
 				   ]))
@@ -95,7 +95,7 @@ async def cp1(bot,update):
 	usertype(int(user_id),"**ACCOUNT DOWNGRADED**")
 	addpre(int(user_id))
 	await update.message.edit("ACCOUNT DOWNGRADED\nThe user can only use 100MB/day from Data qota")
-	await bot.send_message(user_id,"⚠️ Warning ⚠️\n\n- ACCOUNT DOWNGRADED\nYou can only use 500MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/mRiderDM'>**LazyDeveloper**</a>🦋")
+	await bot.send_message(user_id,"⚠️ Warning ⚠️\n\n- ACCOUNT DOWNGRADED\nYou can only use 500MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/ipapcorn_helper'>**Developer**</a>🦋")
 
 @Client.on_callback_query(filters.regex('cp2'))
 async def cp2(bot,update):
@@ -106,7 +106,7 @@ async def cp2(bot,update):
 	usertype(int(user_id),"**ACCOUNT DOWNGRADED Lv-2**")
 	addpre(int(user_id))
 	await update.message.edit("ACCOUNT DOWNGRADED to Level 2\nThe user can only use 100MB/day from Data qota")
-	await bot.send_message(user_id,"⛔️ Last Warning ⛔️\n\n- ACCOUNT DOWNGRADED to Level 2\nYou can only use 100MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/mRiderDM'>**LazyDeveloper**</a>🦋")
+	await bot.send_message(user_id,"⛔️ Last Warning ⛔️\n\n- ACCOUNT DOWNGRADED to Level 2\nYou can only use 100MB/day from Data qota.\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/ipapcorn_helper'>**Developer**</a>🦋")
 
 @Client.on_callback_query(filters.regex('cp3'))
 async def cp3(bot,update):
@@ -117,15 +117,15 @@ async def cp3(bot,update):
 	usertype(int(user_id),"**POWER CEASED !**")
 	addpre(int(user_id))
 	await update.message.edit("All power ceased from the user.\nThis account has 0 mb renaming capacity ")
-	await bot.send_message(user_id,"🚫 All POWER CEASED 🚫\n\n- All power has been ceased from you \nFrom now you can't rename files using me\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/mRiderDM'>**LazyDeveloper**</a>🦋")
+	await bot.send_message(user_id,"🚫 All POWER CEASED 🚫\n\n- All power has been ceased from you \nFrom now you can't rename files using me\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/ipapcorn_helper'>**Developer**</a>🦋")
 
 @Client.on_callback_query(filters.regex('dft'))
 async def dft(bot,update):
 	id = update.message.reply_to_message.text.split("/resetpower")
 	user_id = id[1].replace(" ", "")
-	inlimit = 1288490188
-	uploadlimit(int(user_id), 1288490188)
+	inlimit = 1500000000
+	uploadlimit(int(user_id), 1500000000)
 	usertype(int(user_id),"**Free**")
 	addpre(int(user_id))
-	await update.message.edit("Daily Data limit has been reset successsfully.\nThis account has default 1.2 GB renaming capacity ")
-	await bot.send_message(user_id,"Your Daily Data limit has been reset successsfully.\n\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/mRiderDM'>**LazyDeveloper**</a>🦋")
+	await update.message.edit("Daily Data limit has been reset successsfully.\nThis account has default 1.5 GB renaming capacity ")
+	await bot.send_message(user_id,"Your Daily Data limit has been reset successsfully.\n\nCheck your plan here - /myplan\n- Contact Admin 🦋<a href='https://t.me/ipapcorn_helper'>**Developer**</a>🦋")
