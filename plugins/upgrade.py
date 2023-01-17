@@ -58,5 +58,5 @@ async def upgradecm(bot,message):
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("ADMIN 🛂",url = "https://t.me/ipapcorn_helper")], 
         			[InlineKeyboardButton("Paytm",url = "https://t.me/ipapcorn_helper"),
-        			InlineKeyboardButton("Paytm",url = "https://p.paytm.me/xCTH/vo37hii9")],[InlineKeyboardButton("Cancel",callback_data = "cancel")  ]])
+        			InlineKeyboardButton("Paytm",url = "https://t.me/ipapcorn_helper")],[InlineKeyboardButton("Cancel",callback_data = "cancel")  ]])
 	await message.reply_text(text = text,reply_markup = keybord)
