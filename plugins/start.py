@@ -17,8 +17,8 @@ import os
 
 CHANNEL = os.environ.get('CHANNEL', "")
 STRING = os.environ.get("STRING", "")
-ADMIN = int(os.environ.get("ADMIN", 1484670284))
-bot_username = os.environ.get("BOT_USERNAME","GangsterBaby_renamer_BOT")
+ADMIN = int(os.environ.get("ADMIN", ))
+bot_username = os.environ.get("BOT_USERNAME","")
 log_channel = int(os.environ.get("LOG_CHANNEL", ""))
 token = os.environ.get('TOKEN', '')
 botid = token.split(':')[0]
@@ -51,7 +51,7 @@ async def start(client, message):
                                 caption=txt,
                                 reply_markup=InlineKeyboardMarkup(
                                       [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/Film_Update_Official")],
-                                      [InlineKeyboardButton("🦋 Subscribe us 🦋", url="https://t.me/Film_Update_Official")],
+                                      [InlineKeyboardButton("🦋HOW TO USE THIS BOT🦋", url="https://t.me/Film_Update_Official")],
                                       [InlineKeyboardButton("Support Group", url='https://t.me/ipapcornsupport'),
                                       InlineKeyboardButton("Movie Channel", url='https://t.me/Film_Update_Official')],
                                       [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://t.me/Film_Update_Official')]
@@ -65,7 +65,7 @@ async def start(client, message):
                                          caption=txt,
                                          reply_markup=InlineKeyboardMarkup(
                                              [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/Film_Update_Official")],
-                                              [InlineKeyboardButton("🦋 Subscribe us 🦋", url="https://youtube.com/@ipapcorn")],
+                                              [InlineKeyboardButton("🦋HOW TO USE THIS BOT🦋", url="https://youtube.com/@ipapcorn")],
                                               [InlineKeyboardButton("Support Group", url='https://t.me/ipapcornsupport'),
                                              InlineKeyboardButton("Movie Channel", url='https://t.me/Film_Update_Official')],
                                              [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://t.me/Film_Update_Official')]
@@ -73,10 +73,10 @@ async def start(client, message):
             except:
                 return
         else:
-            await client.send_message(id, "Congrats! You Won 100MB Upload limit")
+            await client.send_message(id, "Congrats! You Won 3GB Upload limit")
             _user_ = find_one(int(id))
             limit = _user_["uploadlimit"]
-            new_limit = limit + 104857600
+            new_limit = limit + 3145728000
             uploadlimit(int(id), new_limit)
             await message.reply_text(text=f"""
 	Hello {wish} {message.from_user.first_name }\n\n
@@ -85,7 +85,7 @@ async def start(client, message):
 	""", reply_to_message_id=message.id,
                                      reply_markup=InlineKeyboardMarkup(
                                          [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/Film_Update_Official")],
-                                          [InlineKeyboardButton("🦋 Subscribe us 🦋", url="https://youtube.com/@ipapcorn")],
+                                          [InlineKeyboardButton("🦋HOW TO USE THIS BOT🦋", url="https://youtube.com/@ipapcorn")],
                                           [InlineKeyboardButton("Support Group", url='https://t.me/ipapcornsupport'),
                                           InlineKeyboardButton("Movie Channel", url='https://t.me/Film_Update_Official')],
                                           [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://t.me/Film_Update_Official')]
@@ -127,7 +127,7 @@ async def send_doc(client, message):
         await message.reply_text(text=f"Hello dear {message.from_user.first_name}  **we are currently working on this issue**\n\nPlease try to rename files from your another account.\nBecause this BOT can't rename file sent by some ids.\n\nIf you are an **ADMIN** Don't worry ! here we have a solution for you dear {message.from_user.first_name }.\n\nPlease use \n👉 `/addpremium your_other_userid` 👈 to use premium feautres\n\n",
                                   reply_markup=InlineKeyboardMarkup([
                                                                      [InlineKeyboardButton("🦋 Contact Developer 🦋", url='https://t.me/Film_Update_Official')],
-                                                                     [InlineKeyboardButton("🔺 Watch Tutorial 🔺", url='https://youtube.com/@ipapcorn')],
+                                                                     [InlineKeyboardButton("🦋HOW TO USE THIS BOT🦋", url='https://youtube.com/@ipapcorn')],
                                                                      [InlineKeyboardButton("🦋 Visit Channel  ", url='https://t.me/Film_Update_Official'),
                                                                      InlineKeyboardButton("  Support Group 🦋", url='https://t.me/ipapcornsupport')],
                                                                      [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://t.me/Film_Update_Official')]
@@ -200,6 +200,6 @@ async def send_doc(client, message):
             fileid = file.file_id
             total_rename(int(botid), prrename)
             total_size(int(botid), prsize, file.file_size)
-            await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid}""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
+            await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid}\n**PLEASE REPLY THIS MESSAGE AND SEND NEW FILE NAME**""", reply_to_message_id=message.id, reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("📝 Rename", callback_data="rename"),
                   InlineKeyboardButton("✖️ Cancel", callback_data="cancel")]]))
