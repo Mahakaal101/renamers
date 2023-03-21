@@ -16,11 +16,11 @@ from helper.date import check_expi
 import os
 
 CHANNEL = os.environ.get('CHANNEL', "Film_Update_Official")
-STRING = os.environ.get("STRING", "")
-ADMIN = int(os.environ.get("ADMIN", ))
+STRING = os.environ.get("STRING", "BQBVwpItoDnVyhwuKE9raKXfU9_ttPKmeVXiMAzcDQup8DDidlYLWhAHGQ-DFBtlpUp3r1MN6PVc10qw3S91JMcK71Vz7Uf8OhXJ1u0RLUtBHbWr0nWXrdfFfGZbH5nIJQnCio1SX6I-lNw_Mf-wVdIOIVv3Jk7ilc6_yh37mNcK07z6Lj9B2nDuzN6Xj0P9EDIXw6q2ul8mD00u7ztHRHwyDAi-r6TjrA_7Wo4EuhiaB11n0kE2QUk-KAMNIY1VP0n2DG0VLw6fyXnn5zwDh7OAZStK2wmyHrHhKEIcZlHqd-RUqFuAfXWgqLs01LtpeF9hqGUqUWH8JzVobDroLs21AAAAATMiN8EA")
+ADMIN = int(os.environ.get("ADMIN", 5152847809))
 bot_username = os.environ.get("BOT_USERNAME","tlgrenamerbot")
 log_channel = int(os.environ.get("LOG_CHANNEL", "-100152957746"))
-token = os.environ.get('TOKEN', '')
+token = os.environ.get('TOKEN', '5945280153:AAEZFpMp-Plgwgoce0uVkT7RKk6rLTngCSA')
 botid = token.split(':')[0]
 FLOOD = 50
 LAZY_PIC = os.environ.get("LAZY_PIC", "https://graph.org/file/d052c0671e48ca6ca15be.jpg")
