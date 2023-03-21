@@ -10,17 +10,8 @@ API_ID = int(os.environ.get("API_ID", "15823382"))
 
 API_HASH = os.environ.get("API_HASH", "016d5e115a06ddfb6121823d72ae4d8c")
 
-STRING = os.environ.get("STRING", "")
+STRING = os.environ.get("STRING", "BQBVwpItoDnVyhwuKE9raKXfU9_ttPKmeVXiMAzcDQup8DDidlYLWhAHGQ-DFBtlpUp3r1MN6PVc10qw3S91JMcK71Vz7Uf8OhXJ1u0RLUtBHbWr0nWXrdfFfGZbH5nIJQnCio1SX6I-lNw_Mf-wVdIOIVv3Jk7ilc6_yh37mNcK07z6Lj9B2nDuzN6Xj0P9EDIXw6q2ul8mD00u7ztHRHwyDAi-r6TjrA_7Wo4EuhiaB11n0kE2QUk-KAMNIY1VP0n2DG0VLw6fyXnn5zwDh7OAZStK2wmyHrHhKEIcZlHqd-RUqFuAfXWgqLs01LtpeF9hqGUqUWH8JzVobDroLs21AAAAATMiN8EA")
 
-DB_NAME = os.environ.get("DB_NAME", "renamer")
-
-DB_URL = os.environ.get("DB_URL", "mongodb+srv://Dipanshu_021:ad8920@cluster0.f7migc1.mongodb.net/?retryWrites=true&w=majority")
-
-BOT_USERNAME = os.environ.get("BOT_USERNAME", "tlgrenamerbot")
-
-CHANNEL = os.environ.get("CHANNEL", "Film_Update_Official")
-
-ADMIN = int(os.environ.get("ADMIN", "5104293442"))
 
 bot = Client(
 
