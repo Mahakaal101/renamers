@@ -17,7 +17,7 @@ import os
 
 CHANNEL = os.environ.get('CHANNEL', "Film_Update_Official")
 STRING = os.environ.get("STRING", "")
-ADMIN = int(os.environ.get("ADMIN", 5104293442))
+ADMIN = int(os.environ.get("ADMIN", ))
 bot_username = os.environ.get("BOT_USERNAME","tlgrenamerbot")
 log_channel = int(os.environ.get("LOG_CHANNEL", "-100152957746"))
 token = os.environ.get('TOKEN', '')
