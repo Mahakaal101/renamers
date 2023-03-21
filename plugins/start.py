@@ -20,9 +20,9 @@ STRING = os.environ.get("STRING", "")
 ADMIN = int(os.environ.get("ADMIN", 5104293442))
 bot_username = os.environ.get("BOT_USERNAME","tlgrenamerbot")
 log_channel = int(os.environ.get("LOG_CHANNEL", "-100152957746"))
-token = os.environ.get('TOKEN', '5945280153:AAEZFpMp-Plgwgoce0uVkT7RKk6rLTngCSA')
+token = os.environ.get('TOKEN', '')
 botid = token.split(':')[0]
-FLOOD = 500
+FLOOD = 50
 LAZY_PIC = os.environ.get("LAZY_PIC", "https://graph.org/file/d052c0671e48ca6ca15be.jpg")
 
 
