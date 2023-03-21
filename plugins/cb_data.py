@@ -24,7 +24,7 @@ API_HASH = os.environ.get("API_HASH", "016d5e115a06ddfb6121823d72ae4d8c")
 
 STRING = os.environ.get("STRING", "")
 
-ADMIN = os.environ.get("ADMIN", "5104293442")
+ADMIN = os.environ.get("ADMIN", "")
 
 app = Client("test", api_id=API_ID, api_hash=API_HASH, session_string=STRING)
 
