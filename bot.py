@@ -20,7 +20,7 @@ BOT_USERNAME = os.environ.get("BOT_USERNAME", "tlgrenamerbot")
 
 CHANNEL = os.environ.get("CHANNEL", "Film_Update_Official")
 
-ADMIN = int(os.environ.get("ADMIN", "5104293442")
+ADMIN = int(os.environ.get("ADMIN", "5104293442"))
 
 bot = Client(
 
